@@ -40,6 +40,7 @@ export default function Programmers() {
     return programmer.name;
   };
 
+  //takes devId clicked on and setting in state
   const featureDev = (devId) => {
     setDevId(devId);
   }
@@ -69,6 +70,7 @@ export default function Programmers() {
       {
         // Ternaries are fantastic to render "one thing or the other" depending on the "truthiness" of something.
         // Pseudo-code: if the currently featured id is truthy render div 1, otherwise render div 2. Fix!
+        //if devId is set to anything but null return 1st statement otherwise if null return 2nd statement
         devId
           ? <div style={style}>🎉 Let&apos;s celebrate {getNameOfFeatured()}! 🥳</div>
           : <div style={style}>Pick an awesome programmer</div>
